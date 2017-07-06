@@ -7,7 +7,7 @@ def index():
 # this route will handle our form submission
 # notice how we defined which HTTP methods are allowed by this route
 
-@app.route('/users/<name>')
+@app.route('/')
 def show_user_profile(name):
     print name
     return render_template("users.html")
