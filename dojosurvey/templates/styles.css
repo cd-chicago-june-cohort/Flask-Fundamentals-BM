@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+#header {
+    text-decoration: underline;
+}
+
+form {
+    width: 500px;
+    border: 2px solid black;
+    background: lightgray;
+}
+
+.input {
+    width: 170px;
+}
+
+#button {
+    margin: 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<!--        <link rel="stylesheet" href="{{ url_for ('static', filename='styles.css')}}">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        
+        <title> Dojo Survey </title>
+    </head>
+  
+    <body>
+        <div class = "container">
+            
+            <form class="pure-form pure-form-aligned" action="/process" method="post">
+            <fieldset>
+
+                <div class="pure-control-group">
+                    <label for="your_name">Your Name: </label>
+                    <input type="text" id="your_name" class="input" name="name">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="location">Dojo Location:</label>
+                    <select name="dojo" id="location" class="input">
+                        <option value="null">SELECT CITY</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Silicon Valley">Silicon Valley</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Washington DC">Washington DC</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Tulsa">Tulsa</option>
+                    </select>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="fav_language">Favorite Language:</label>
+                    <select name="language" class="input" id="fav_language">
+                        <option value="null">SELECT LANGUAGE</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="French">French</option>
+                    </select>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" class="input" name="comments"></textarea>
+                </div>
+                
+                <div class="pure-control-group">
+                    <input id="button" type="submit" class="pure-button pure-button-primary">
+                </div>
+            </fieldset>
+            </form>
+
+        </div>
+  
+    </body>
+</html>
