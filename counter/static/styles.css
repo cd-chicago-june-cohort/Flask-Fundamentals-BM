@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+input {
+    width: 40px;
+}
+
+.container {
+    margin-top: 60px;
+}
