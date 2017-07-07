@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   <script src=" "></script>
+   <title>Which Turtle</title>
+</head>
+<body>
+    <div class="container">
+        {% if pic=='blue' %} 
+        <h1>Leonardo</h1>
+        <img src="{{ url_for('static', filename='images/leonardo.jpg')}}" alt="Leo">
+        {% elif pic=='orange' %}
+        <h1>Michelangelo</h1>
+        <img src="{{ url_for('static', filename='images/leonardo.jpg')}}" alt="Michelangelo">
+        {% elif pic=='red' %}
+        <h1>Raphael</h1>
+        <img src="{{ url_for('static', filename='images/raphael.jpg')}}" alt="Raphael">
+        {% elif pic=='purple' %}
+        <h1>Donatello</h1>
+        <img src="{{ url_for('static', filename='images/raphael.jpg')}}" alt="Donatello">
+        {% else %}
+        <img src="{{ url_for('static', filename='images/notapril.jpg')}}" alt="Raphael">
+        {% endif %}
+    </div>
+</body>
+</html>
