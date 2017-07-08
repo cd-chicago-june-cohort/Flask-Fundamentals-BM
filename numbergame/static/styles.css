@@ -3,3 +3,44 @@
     padding: 0;
     text-align: center;
 }
+
+#response, #winner {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#response h1 {
+    width: 260px;
+    height: 260px;
+    border: 2px solid black;
+    background: red;
+    margin: auto;
+    padding-top: 100px;
+    box-shadow: 2px 2px black;
+}
+
+#winner h1 {
+    width: 260px;
+    height: 260px;
+    border: 2px solid black;
+    background: green;
+    margin: auto;
+    padding-top: 100px;
+    box-shadow: 2px 2px black;
+}
+
+input {
+    margin: 10px;
+    width: 80px;
+    border: 2px solid gray;
+    box-shadow: 2px 2px black;
+}
+
+#submit, #reset {
+    background: gray;
+    width: 80px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
