@@ -27,12 +27,20 @@ def process_form():
         flash("Please enter YOUR NAME")
         return redirect('/')
 
+    if len(request.form['name']) > 119:
+        flash("Your name is WAY too long.  Your new name is Joe.")
+        return redirect('/')
+
     if (request.form['dojo']) == 'null':
         flash("Please enter THE DOJO")
         return redirect('/')
 
     if (request.form['language']) == 'null':
         flash("Please pick a language")
+        return redirect('/')
+
+    if len(request.form['comments']) > 119:
+        flash("If you don't have something nice to say, don't say anything at all.")
         return redirect('/')
         
     else:
