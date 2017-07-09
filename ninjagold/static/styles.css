@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#goldbox {
+    text-align: center;
+    background: lightgray;
+    border: 10px solid black;
+}
+
+.goldtracker {
+    display: inline;
+}
+
+.place {
+    text-align: center;
+    width: 25%;
+    border: 2px solid black;
+    height: 180px;
+    padding: 10px;
+}
+
+.findgold {
+    margin-top: 40px;
+}
+
+#activities {
+    border: 5px solid black;
+    height: 400px;
+}
+
+#warning {
+    margin-left:  60px;
+}
+
+#actreset {
+    margin-left: 20px;
+}
