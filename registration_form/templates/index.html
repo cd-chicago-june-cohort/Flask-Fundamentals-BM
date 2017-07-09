@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   <script src="{{url_for('static', filename='regform.js')}}"></script>
+   <title>Registration Form</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <form class="pure-form" action="/process" method="post">
+            <h1>Registration Form</h1>
+            <h3>Please complete every field</h3>
+            <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="message">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            </p>
+
+            <fieldset class="pure-group">
+                <input type="text" class="pure-input-1-2" name="first_name" placeholder="First Name" autofocus>
+                <input type="text" class="pure-input-1-2" name="last_name" placeholder="Last Name">
+            </fieldset>
+            <fieldset class="pure-group">
+                <input type="password" class="pure-input-1-2" name="password" placeholder="Password">
+                <input type="password" class="pure-input-1-2" name="pass_conf" placeholder="Confirm Password">
+            </fieldset>
+            <fieldset class="pure-group">                
+                <input type="email" class="pure-input-1-2" name="email" placeholder="Email">
+            </fieldset>
+          
+            <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+        </form>
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>
