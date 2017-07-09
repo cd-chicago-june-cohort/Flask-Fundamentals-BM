@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+   <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   <script src="{{url_for('static', filename='dojosurveryval.js')}}"></script>-->
+   <title>Dojo Survey Val</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        
+            <h1 class="header">Dojo Survey</h1>
+            <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="header">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            </p>
+        
+        
+        <form class="pure-form" action="/process" method="post">
+            <fieldset class="pure-group">
+                <input type="text" class="pure-input-1-2" id="your_name" name="name" placeholder="Your Name">
+
+                <select name="dojo" type="text" class="pure-input-1-2"id="location" placeholder="Dojo Location">
+                    <option value="null">Dojo Location</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Silicon Valley">Silicon Valley</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                </select>
+                
+                <select name="language" class="pure-input-1-2" id="fav_language">
+                    <option value="null">Favorite Language</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="French">French</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="pure-group">
+                
+                <textarea class="pure-input-1-2" id="comments" name="comments" placeholder="Comments (optional)"></textarea>
+            </fieldset>
+
+            <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+        </form>
+       
+    </div>
+</body>
+</html>
