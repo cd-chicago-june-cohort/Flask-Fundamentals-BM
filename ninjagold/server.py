@@ -25,7 +25,8 @@ def process_money ():
         print gold
         activities=session['activities']
         activities.insert(0,"You just farmed your way to " + str(session['newgold']) +  " gold at " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-        # session['activities']=activities
+        session['activities']=activities
+        print activities
         return redirect('/')
 
     elif request.form['building']=='cave':

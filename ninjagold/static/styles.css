@@ -1,39 +1,72 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+body {
+    height: 700px;
+    background-image: url(ninjaback1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.uptop {
+    margin: 10px;
 }
 
 #goldbox {
+    font-size: 1.4em;
     text-align: center;
-    background: lightgray;
-    border: 10px solid black;
+    background: black;
+    border: 8px solid black;
+}
+
+#warning {
+    width: 300px;
+    margin-left: 25%;
 }
 
 .goldtracker {
     display: inline;
+    margin: 10px;
 }
 
 .place {
     text-align: center;
-    width: 25%;
-    border: 2px solid black;
-    height: 180px;
-    padding: 10px;
+    /*width: 25%;*/
+    /*height: 180px;*/
+    /*padding: 10px;*/
 }
 
 .findgold {
-    margin-top: 40px;
+    margin: 40px;
+    background: gold;
+    color: black;
 }
 
 #activities {
     border: 5px solid black;
-    height: 400px;
-}
-
-#warning {
-    margin-left:  60px;
+    /*height: 400px;*/
 }
 
 #actreset {
     margin-left: 20px;
+}
+
+.innerbox {
+    border: 4px solid black;
+    background-image: url(bambooback1.jpg);
+    width: 300px;
+    margin: auto;
+    /*margin-left: 110px;*/
+}
+
+#resetbutton {
+    background-color: black;
+}
+
+.title {
+    color: black;
 }
