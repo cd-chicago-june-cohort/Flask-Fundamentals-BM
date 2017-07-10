@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--<script src="{{url_for('static', filename='FILENAME.js')}}"></script>-->
+    <style>
+        form {
+            background-color:rgb({{red}},{{green}},{{blue}});
+        }
+   </style>
+    <title>Color Picker</title>
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <form class="pure-form pure-form-aligned" action="/" method="post" id="main">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="red">Enter Red Value: </label>
+                    <input id="red" type="text" placeholder="between 1 and 255">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="Enter Green Value">Enter Green Value: </label>
+                    <input id="green" type="text" placeholder="between 1 and 255">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="Enter Blue Value">Enter Blue Value: </label>
+                    <input id="Blue" type="text" placeholder="between 1 and 255">
+                </div>
+
+                <div class="pure-controls">
+                    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
